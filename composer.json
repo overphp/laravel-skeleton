@@ -18,5 +18,8 @@
       "email": "overphp2@gmail.com"
     }
   ],
-  "minimum-stability": "stable"
+  "minimum-stability": "stable",
+  "require-dev": {
+    "laravel/framework": "^9.0"
+  }
 }
