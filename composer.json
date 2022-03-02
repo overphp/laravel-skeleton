@@ -1,0 +1,22 @@
+{
+  "name": "overphp/laravel-skeleton",
+  "type": "library",
+  "description": "API development component based on laravel framework.",
+  "require": {
+    "php": "^8.0.2",
+    "tucker-eric/eloquentfilter": "^3.1"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Overphp\\LaravelSkeleton\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "overphp",
+      "email": "overphp2@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable"
+}
