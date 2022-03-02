@@ -6,7 +6,7 @@ use Illuminate\Support\Str;
 
 class TraceID
 {
-    private static TraceID $instance;
+    private static TraceID|null $instance = null;
 
     private string $id;
 
