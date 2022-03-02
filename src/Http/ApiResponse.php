@@ -3,6 +3,7 @@
 namespace Overphp\LaravelSkeleton\Http;
 
 use Illuminate\Http\JsonResponse;
+use Overphp\LaravelSkeleton\Trace\TraceID;
 use Symfony\Component\HttpFoundation\Response;
 
 class ApiResponse
@@ -43,7 +44,7 @@ class ApiResponse
             [
                 'code' => $code,
                 'message' => $message,
-                'request_id' => '',
+                'request_id' => TraceID::id(),
                 'data' => $data,
             ],
             Response::HTTP_OK,
