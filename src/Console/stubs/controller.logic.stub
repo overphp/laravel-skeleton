@@ -1,0 +1,19 @@
+<?php
+
+namespace {{ namespace }};
+
+use Overphp\LaravelSkeleton\Http\Controller;
+use {{ namespacedLogic }};
+
+class {{ class }} extends Controller
+{
+    protected {{ classLogic }} $logic;
+
+    /**
+     * @param {{ classLogic }} $logic
+     */
+    public function __construct({{ classLogic }} $logic)
+    {
+        $this->logic = $logic;
+    }
+}

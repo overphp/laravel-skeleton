@@ -1,0 +1,9 @@
+<?php
+
+namespace {{ namespace }};
+
+use Overphp\LaravelSkeleton\Logic\Logic;
+
+class {{ class }} extends Logic
+{
+}

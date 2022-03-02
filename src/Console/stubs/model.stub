@@ -1,0 +1,9 @@
+<?php
+
+namespace {{ namespace }};
+
+use Overphp\LaravelSkeleton\Model\Model;
+
+class {{ class }} extends Model
+{
+}

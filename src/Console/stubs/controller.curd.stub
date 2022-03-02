@@ -1,0 +1,98 @@
+<?php
+
+namespace {{ namespace }};
+
+use Overphp\LaravelSkeleton\Http\Controller;
+use Overphp\LaravelSkeleton\Http\ApiResponse;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
+use Exception;
+use {{ namespacedRequest }};
+use {{ namespacedLogic }};
+
+class {{ class }} extends Controller
+{
+    protected {{ classLogic }} $logic;
+
+    /**
+     * @param {{ classLogic }} $logic
+     */
+    public function __construct({{ classLogic }} $logic)
+    {
+        $this->logic = $logic;
+    }
+
+    /**
+     * @route get
+     *
+     * @param Request $request
+     * @return JsonResponse
+     * @throws Exception
+     */
+    public function index(Request $request): JsonResponse
+    {
+        $params = $request->all();
+
+        return ApiResponse::success($this->logic->getPaginationList($params));
+    }
+
+    /**
+     * @route post
+     *
+     * @param {{ classRequest }} $request
+     * @return JsonResponse
+     * @throws Exception
+     */
+    public function create({{ classRequest }} $request): JsonResponse
+    {
+        $data = $request->getValidatedData();
+        $model = $this->logic->create($data);
+
+        return ApiResponse::success([
+            'id' => $model->id,
+        ]);
+    }
+
+    /**
+     * @route post
+     *
+     * @param {{ classRequest }} $request
+     * @return JsonResponse
+     * @throws Exception
+     */
+    public function update({{ classRequest }} $request): JsonResponse
+    {
+        $data = $request->getValidatedData();
+        $this->logic->update($data);
+
+        return ApiResponse::success();
+    }
+
+    /**
+     * @route post
+     *
+     * @param {{ classRequest }} $request
+     * @return JsonResponse
+     * @throws Exception
+     */
+    public function delete({{ classRequest }} $request): JsonResponse
+    {
+        $this->logic->delete($request->get('id'));
+
+        return ApiResponse::success();
+    }
+
+    /**
+     * @route get
+     *
+     * @param {{ classRequest }} $request
+     * @return JsonResponse
+     * @throws Exception
+     */
+    public function detail({{ classRequest }} $request): JsonResponse
+    {
+        return ApiResponse::success([
+            'detail' => $this->logic->getDetail($request->get('id')),
+        ]);
+    }
+}

@@ -1,0 +1,44 @@
+<?php
+
+namespace {{ namespace }};
+
+use Overphp\LaravelSkeleton\Http\FormRequest;
+
+class {{ class }} extends FormRequest
+{
+    /**
+     * @return array
+     */
+    protected function createRules(): array
+    {
+        // TODO::
+    }
+
+    /**
+     * @return array
+     */
+    protected function updateRules(): array
+    {
+        // TODO::
+    }
+
+    /**
+     * @return array
+     */
+    protected function deleteRules(): array
+    {
+        return [
+            'id' => 'required'
+        ];
+    }
+
+    /**
+     * @return array
+     */
+    protected function detailRules(): array
+    {
+        return [
+            'id' => 'required'
+        ];
+    }
+}

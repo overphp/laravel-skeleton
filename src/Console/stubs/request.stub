@@ -1,0 +1,10 @@
+<?php
+
+namespace {{ namespace }};
+
+use Overphp\LaravelSkeleton\Http\FormRequest;
+
+class {{ class }} extends FormRequest
+{
+
+}

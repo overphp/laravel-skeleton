@@ -1,0 +1,16 @@
+<?php
+
+namespace {{ namespace }};
+
+use Overphp\LaravelSkeleton\Logic\CurdLogic;
+
+class {{ class }} extends CurdLogic
+{
+    /**
+     * @return string
+     */
+    protected function orm(): string
+    {
+        return '';
+    }
+}

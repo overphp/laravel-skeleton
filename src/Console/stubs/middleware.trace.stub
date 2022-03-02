@@ -1,0 +1,20 @@
+<?php
+
+namespace {{ namespace }};
+
+use Overphp\LaravelSkeleton\Trace\TraceMiddleware;
+
+class {{ class }} extends TraceMiddleware
+{
+    protected array $except = [
+
+    ];
+
+    protected array $request_except = [
+
+    ];
+
+    protected array $response_except = [
+
+    ];
+}

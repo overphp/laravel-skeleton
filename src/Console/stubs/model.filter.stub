@@ -1,0 +1,11 @@
+<?php
+
+namespace {{ namespace }};
+
+use Overphp\LaravelSkeleton\Model\Model;
+use Overphp\LaravelSkeleton\Model\Filterable;
+
+class {{ class }} extends Model
+{
+    use Filterable;
+}
